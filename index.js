@@ -17,24 +17,12 @@ function calcularBeneficio(precio, beneficio) {
 }
 
 btn.addEventListener('click', () => {
-  switch (true) {
-    case precio.value === '' && beneficio.value === '':
-      alert('Tienes que introducir el precio y el beneficio del producto');
-      break;
-    case precio.value === '' && beneficio.value !== '':
-      alert('Tienes que introducir el precio del producto');
-      break;
-    case precio.value !== '' && beneficio.value === '':
-      alert('Tienes que introducir el beneficio del producto');
-      break;
-
-    default:
-      total.value = calcularBeneficio(
+  precio === ''
+    ? alert('Tienes que introducir un precio')
+    : (total.value = calcularBeneficio(
         Number(precio.value),
         Number(beneficio.value)
-      );
-      break;
-  }
+      ));
 });
 
 precio.addEventListener('keypress', (event) => {
