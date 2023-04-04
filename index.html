@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Calcula el precio de un producto</h2>
+    <hr />
+    <div id="div-precio">
+      <label for="precio">Precio base</label>
+      <input
+        type="number"
+        name=""
+        id="precio"
+        min="1"
+        placeholder="Precio sin iva"
+      />
+    </div>
+    <div id="div-beneficios">
+      <input
+        type="range"
+        name=""
+        id="beneficio"
+        list="tickmarks"
+        step="1"
+        placeholder="Beneficio a aplicar"
+      />
+      <p id="text-range">50%</p>
+      <datalist id="tickmarks">
+        <option value="0" label="0"></option>
+        <option value="10"></option>
+        <option value="20"></option>
+        <option value="30"></option>
+        <option value="40"></option>
+        <option value="50" label="5"></option>
+        <option value="60"></option>
+        <option value="70"></option>
+        <option value="80"></option>
+        <option value="90"></option>
+        <option value="100" label="10"></option>
+      </datalist>
+    </div>
+
+    <button id="btn">Calcular</button>
+
+    <div>
+      <label for="total">Precio total</label>
+      <input type="text" name="" id="total" disabled />
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
